@@ -262,8 +262,8 @@ public class InventoryHandler {
 
 		ItemStack shopTokens = new ItemStack(Material.EMERALD, 1);
 		ItemMeta shopTokens_IM = shopTokens.getItemMeta();
-		shopTokens_IM.setDisplayName(MessageM.replaceAll("%N&l!Want to translate it!: %A"
-				+ playerTokens));
+		shopTokens_IM.setDisplayName(MessageM.replaceAll((String) W.config
+						.get(ConfigC.shop_TokensName) + playerTokens)); //I want to transalte it in config.yml - help me :)
 		shopTokens.setItemMeta(shopTokens_IM);
 
 		ItemStack shopBlockChooser = new ItemStack(
